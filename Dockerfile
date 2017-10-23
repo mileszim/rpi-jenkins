@@ -1,8 +1,8 @@
 FROM jsurf/rpi-raspbian:latest
-MAINTAINER Wouter De Schuyter <wouter.de.schuyter@gmail.com>
+MAINTAINER Miles Zimmerman <mileszim@protonmail.com>
 
 # Jenkins version
-ENV JENKINS_VERSION 2.64
+ENV JENKINS_VERSION 2.86
 
 # Other env variables
 ENV JENKINS_HOME /var/jenkins_home

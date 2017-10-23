@@ -4,7 +4,7 @@ A basic Jenkins image that's compatible with Raspberry Pi. Automated builds are 
 
 ### Supported tags and respective `Dockerfile` links
 
-- [`2.62`](https://github.com/wouterds/rpi-jenkins/tree/2.62/Dockerfile), [`2.63`](https://github.com/wouterds/rpi-jenkins/tree/2.63/Dockerfile),  [`2.64`, `latest` (*Dockerfile*)](https://github.com/wouterds/rpi-jenkins/tree/2.64/Dockerfile)
+- [`2.62`](https://github.com/mileszim/rpi-jenkins/tree/2.62/Dockerfile), [`2.63`](https://github.com/mileszim/rpi-jenkins/tree/2.63/Dockerfile),  [`2.86`, `latest` (*Dockerfile*)](https://github.com/mileszim/rpi-jenkins/tree/2.86/Dockerfile)
 
 ### What is Jenkins?
 
@@ -17,18 +17,18 @@ Jenkins is an open source automation server written in Java. The project was for
 ### Usage
 
 ```
-docker run -p 8080:8080 -p 50000:50000 wouterds/rpi-jenkins
+docker run -p 8080:8080 -p 50000:50000 mileszim/rpi-jenkins
 ```
 
 This will store the workspace in /var/jenkins_home. All Jenkins data lives in there - including plugins and configuration.
 You will probably want to make that an explicit volume so you can manage it and attach to another container for upgrades :
 
 ```
-docker run -p 8080:8080 -p 50000:50000 -v jenkins:/var/jenkins_home wouterds/rpi-jenkins
+docker run -p 8080:8080 -p 50000:50000 -v jenkins:/var/jenkins_home mileszim/rpi-jenkins
 ```
 
 this will automatically create a 'jenkins' volume on docker host, that will survive container stop/restart/deletion.
 
 ---
 
-This image is available on [GitHub](https://github.com/wouterds/rpi-jenkins) & [DockerHub](https://hub.docker.com/r/wouterds/rpi-jenkins).
+This image is available on [GitHub](https://github.com/mileszim/rpi-jenkins) & [DockerHub](https://hub.docker.com/r/mileszim/rpi-jenkins).
